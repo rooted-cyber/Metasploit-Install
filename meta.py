@@ -5,6 +5,10 @@ print("\033[92m Checking Requirements")
 time.sleep(2)
 os.system("bash .check.sh")
 os.system("clear")
+def check():
+	os.system("bash .c.sh")
+
+
 def me():
 	os.system("clear")
 	os.system("toilet -f mono12 -F metal Thanx")
@@ -19,7 +23,7 @@ if a == "1":
 	print("Installing metasploit")
 	os.system("#curl -LO https://github.com/termux/termux-packages/files/3995119/metasploit_5.0.65-1_all.deb.gz;gunzip metasploit_5.0.65-1_all.deb.gz;dpkg -i metasploit_5.0.65-1_all.deb;apt -f install")
 	os.system("clear")
-	print("\nSuccessfully installed metasploit")
+	check()
 	me()
 
 if a == "2":
@@ -27,5 +31,5 @@ if a == "2":
 		os.system("pkg install unstable-repo")
 		os.system("pkg install metasploit")
 		os.system("#clear")
-		print("\033[93m Successfully installed metasploit")
+		check()
 		me()
